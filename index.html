@@ -13,7 +13,9 @@
     <link href="/overlays.css" rel="stylesheet" />
     <link href="/configuration.css" rel="stylesheet" />
     <link href="/game.css" rel="stylesheet" />
-    <script defer src="/app.js"></script>
+    <script defer src="/scripts/config.js"></script>
+    <script defer src="/scripts/game.js"></script>
+    <script defer src="/scripts/app.js"></script>
 </head>
 
 <body>
@@ -28,10 +30,11 @@
             <form>
                 <div class="form-control">
                     <label for="playername">Player Name</label>
-                    <input type="text" name="username" id="playername" />
+                    <input type="text" name="username" id="playername" required />
                 </div>
+                <p id="config-errors"></p>
                 <div>
-                    <button type="button" class="btn btn-alt">Cancel</button>
+                    <button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
                     <button type="submit" class="btn">Confirm</button>
                 </div>
             </form>
@@ -39,19 +42,19 @@
         <section id="game-configuration">
             <ol>
                 <li>
-                    <article>
+                    <article id="player-1-data">
                         <h2>Player 1</h2>
                         <h3>Player name</h3>
                         <p class="player-symbol">X</p>
-                        <button class="btn btn-alt">Edit</button>
+                        <button class="btn btn-alt" id="edit-player1-btn" data-playerid="1">Edit</button>
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article id="player-2-data">
                         <h2>Player 2</h2>
                         <h3>Player name</h3>
                         <p class="player-symbol">O</p>
-                        <button class="btn btn-alt">Edit</button>
+                        <button class="btn btn-alt" id="edit-player2-btn" data-playerid="2">Edit</button>
                     </article>
                 </li>
             </ol>
@@ -66,7 +69,7 @@
 
             <p>It's your turn <span id="active-player-name">Player name</span>!</p>
             <ol id="game-board">
-                <li></li>
+                <li class="disabled"></li>
                 <li></li>
                 <li></li>
 
