@@ -1,0 +1,44 @@
+* {
+    /* border: 1px solid rgba(0, 0, 0, 0.1); */
+    --main-color: rgb(140,0,255);
+}
+
+body {
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    color: rgb(44, 41, 44);
+    background-color: rgb(240, 239, 247);
+}
+
+#main-header {
+    background-color: var(--main-color);
+    color:white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-alt {
+background-color: transparent;
+border-color: transparent;
+color: var(--main-color);
+}
+
+.btn:hover {
+ background-color: rgb(79, 10, 190);
+
+}
+
+.btn-alt:hover {
+    background-color: rgb(245, 232, 255);
+    border-color: transparent;
+}
