@@ -1,6 +1,6 @@
 #active-game {
     text-align: center;
-
+    display:none;
 }
 
 #game-over {
@@ -53,7 +53,7 @@
 
 }
 
-#game-board:disabled {
+#game-board li.disabled {
     background-color: rgb(112, 13, 204);
     cursor: default;
     color: white;
